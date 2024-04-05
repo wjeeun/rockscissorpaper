@@ -1,6 +1,7 @@
 import "./App.css";
 import Box from "./component/Box";
 import { useState } from "react";
+import BoxClass from "./component/BoxClass";
 //1. 박스 2개 (타이틀, 사진, 결과)
 //2. 가위 바위 보 버튼이 있다
 //3. 버튼을 클릭하면 클릭한 값이 박스에 보임
@@ -59,8 +60,9 @@ function App() {
   return (
     <div>
       <div className="main">
-        <Box title="You" item={userSelect} result={result} />
-        <Box title="Computer" item={computerSelect} result={result} />
+        <BoxClass title="You" item={userSelect} result={result} />
+        {/* <Box title="You" item={userSelect} result={result} />
+        <Box title="Computer" item={computerSelect} result={result} /> */}
       </div>
       <div className="main">
         <button onClick={() => play("scissor")}>가위</button>
